@@ -4,4 +4,5 @@ module Api::V1
       @ideas = Idea.all
       render json: @ideas
     end
+  end
 end
