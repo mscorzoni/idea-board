@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import IdeasContainer from './components/IdeasContainer';
 
+
 class App extends Component {
+  state = {
+    ideas: []
+  }
+
+
+
   render() {
     return (
       <div className="App">
