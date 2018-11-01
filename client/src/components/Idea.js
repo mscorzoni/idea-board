@@ -1,19 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './App.css';
+import IdeaContainer from './components/IdeaContainer';
 
 class Idea extends Component {
-  handleClick = () => { this.props.onClick(this.props.idea.id) }
-
-  handleDelete = () => { this.props.onDelete(this.props.idea.id) }
-
   render() {
     return (
-      <div className="tile">
-        <span className="deleteButton" onClick={this.handleDelete}>x</span>
-        <h4 onClick={this.handleClick}>{this.props.idea.title}</h4>
-        <p onClick={this.handleClick}>{this.props.idea.body}</p>
+      <div className="App">
+        <div className="App-header">
+          <h1>Idea Board</h1>
+        </div>
+        <IdeaContainer />
       </div>
-    )
+    );
   }
 }
 
-export default Idea
+export default Idea;
