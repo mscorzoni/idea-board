@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
-import IdeaContainer from './components/IdeaContainer';
+import React from 'react';
 
-class Idea extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h1>Idea Board</h1>
-        </div>
-        <IdeaContainer />
-      </div>
-    );
-  }
-}
+const idea = ({idea}) => {
+  return (
+    <div className="tile" key={idea.id}>
+      <h4>{idea.title}</h4>
+      <p>{idea.body}</p>
+    </div>
+  );
+};
 
-export default Idea;
+export default idea;
